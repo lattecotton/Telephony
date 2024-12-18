@@ -191,7 +191,7 @@ class SmsMethodCallHandler(
         addAction(Constants.ACTION_SMS_SENT)
         addAction(Constants.ACTION_SMS_DELIVERED)
       }
-      if (Build.VERSION.SDK_INT >= 34 && context.applicationContext.getApplicationInfo().targetSdkVersion >= 34) {
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
         context.applicationContext.registerReceiver(this, intentFilter, Context.RECEIVER_EXPORTED);
       } else {
         context.applicationContext.registerReceiver(this, intentFilter);
